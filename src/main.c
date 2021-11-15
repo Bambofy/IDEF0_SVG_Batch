@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
                 }
 
                 for (unsigned int i = 0U; i < 521U; i++) { // snip the \n \r from the end of the line.
-                    if (isspace(activity_name[i]) != 0) {
+                    if ((activity_name[i] == '\n') || (activity_name[i] == '\r')) {
                         activity_name[i] = '\0';
                     }
                 }
